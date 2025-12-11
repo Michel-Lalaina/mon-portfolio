@@ -15,21 +15,34 @@ const Home = () => {
     <>
       <Animation />
       <div
-        className={`flex flex-col md:flex-row justify-between items-center md:p-12 min-h-screen transition-all duration-300 ${darkMode
-            ? "bg-gradient-to-br from-[#0b0b25] to-[#1f1f3a] text-white"
-            : "bg-gray-100 text-black"
+        className={`flex flex-col md:flex-row justify-between items-center md:p-12 min-h-screen transition-all duration-100 ${darkMode
+          ? "bg-gradient-to-br from-[#616172] to-[#01010e] text-white"
+          : "bg-gray-100 text-black"
           }`}
       >
         {/* Bouton Mode au centre */}
-        <div className="absolute  md:top-10 md:ml-96 flex justify-center  md:w-full">
+        <div className="absolute md:top-20 md:right-14 flex justify-center">
+  <button
+    className="bg-gray-800 text-slate-200 p-4 rounded-full shadow-lg 
+               hover:bg-gray-600 transition-all duration-500 transform 
+               animate-pulse flex items-center justify-center scale-110"
+    onClick={() => setDarkMode(!darkMode)}
+  >
+    {darkMode ? <LightModeRounded fontSize="medium" /> : <DarkModeRounded fontSize="medium" />}
+  </button>
+</div>
+
+        {/* <div className=" absolute md:top-10 md:ml-96 flex justify-center md:w-full">
           <button
-            className="bg-gray-800 text-slate-200 p-3 rounded-full shadow-lg hover:bg-gray-600 transition flex items-center justify-center"
+            className="bg-gray-800 text-slate-200 p-3 rounded-full shadow-lg 
+               hover:bg-gray-600 transition-all duration-500 transform 
+               animate-pulse flex items-center justify-center"
             onClick={() => setDarkMode(!darkMode)}
           >
             {darkMode ? <LightModeRounded fontSize="small" /> : <DarkModeRounded fontSize="small" />}
-
           </button>
-        </div>
+        </div> */}
+
 
         {/* Partie gauche */}
         <div className="space-y-4 flex flex-col text-center md:text-left">

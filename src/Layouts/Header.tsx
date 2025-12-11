@@ -1,5 +1,4 @@
 import { useState } from "react";
-import logo from "../assets/image/Ml.png";
 import Info from "@mui/icons-material/Info";
 import Work from "@mui/icons-material/Work";
 import Build from "@mui/icons-material/Build";
@@ -19,21 +18,31 @@ const Header = () => {
   ];
 
   return (
-    <header className="
-      fixed top-0 w-full z-50
-      bg-[#0c0c26]/40 backdrop-blur-xl 
-      border-b border-white/10 
-      shadow-[0_0_25px_rgba(255,0,0,0.15)]
-    ">
+    // <header className="
+    //   fixed top-0 w-full z-50
+    //   bg-gradient-to-r from-[#1f1f3a]/80 via-[#2c2c50]/70 to-[#1f1f3a]/80 backdrop-blur-xl
+    //   border-b border-gray-700/20 
+    //   shadow-[0_0_25px_rgba(255,0,0,0.15)]
+    // ">
+    <header
+  className="
+    fixed top-0 w-full z-50
+    bg-gradient-to-r from-[#1f1f3a]/80 via-[#2c2c50]/70 to-[#1f1f3a]/80 
+    backdrop-blur-xl
+    border-b border-white/30
+    shadow-[0_0_25px_rgba(255,0,0,0.15)]
+  "
+>
+
       <div className="container mx-auto h-16 flex justify-between items-center px-6">
 
         {/* Logo moderne */}
-        <div className="w-20 md:w-24 opacity-90 hover:opacity-100 transition">
-          <img src={logo} className="animate-fadeIn"/>
+        <div className="w-20 md:w-24 opacity-90 hover:opacity-100 transition-all duration-300 text-red-400 font-bold text-xl md:text-2xl">
+          Portfolio
         </div>
 
-        {/* Menu Desktop */}
-        <nav className="hidden md:flex space-x-12 text-gray-200 text-sm tracking-wide">
+        {/* Menu Desktop centré */}
+        <nav className="hidden md:flex space-x-16 text-gray-200 text-sm tracking-wide font-semibold justify-center flex-1">
           {menuItems.map((item, i) => (
             <ScrollLink
               key={i}
@@ -42,10 +51,10 @@ const Header = () => {
               duration={500}
               className="
                 relative cursor-pointer 
-                transition-all hover:text-red-500
-                before:absolute before:bottom-[-4px] before:left-0 
-                before:w-0 before:h-[2px] before:bg-red-500
-                before:transition-all before:duration-300 hover:before:w-full
+                transition-all hover:text-red-400
+                before:absolute before:bottom-[-4px] before:left-1/2 before:w-0 before:h-[2px] 
+                before:bg-red-400 before:transition-all before:duration-300 before:-translate-x-1/2
+                hover:before:w-10
               "
             >
               {item.name.charAt(0).toUpperCase() + item.name.slice(1)}
@@ -78,7 +87,7 @@ const Header = () => {
                 to={item.name}
                 smooth={true}
                 duration={500}
-                className="hover:text-red-500 cursor-pointer text-sm tracking-wider"
+                className="hover:text-red-400 cursor-pointer text-sm tracking-wider"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name.charAt(0).toUpperCase() + item.name.slice(1)}
