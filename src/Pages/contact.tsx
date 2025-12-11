@@ -45,11 +45,11 @@ const Contact = () => {
       'Z_FGIeluSy3icSw0A'       // Remplace par Public Key
     )
     .then(
-      (result) => {
+      () => {
         toast.success("Votre message a été envoyé !");
         setFormData({ name: "", email: "", message: "" });
       },
-      (error) => {
+      () => {
         toast.error("Erreur lors de l'envoi du message.");
       }
     );

@@ -16,7 +16,7 @@ const Home = () => {
       <Animation />
       <div
         className={`flex flex-col md:flex-row justify-between items-center md:p-12 min-h-screen transition-all duration-100 ${darkMode
-          ? "bg-gradient-to-br from-[#20202b] to-[#00000a] text-white"
+          ? "bg-gradient-to-br from-[#222229] to-[#00000a] text-white"
           : "bg-gray-100 text-black"
           }`}
       >
