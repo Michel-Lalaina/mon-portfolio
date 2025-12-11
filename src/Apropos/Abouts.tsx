@@ -4,7 +4,7 @@ import FormationInfoCard from "../components/Order";
 import SoftSkillsCard from "../components/softSkill";
 import MonthlyTarget from "../components/monthlyTarget";
  import MonthlySalesChart from "../components/monthScale";
-import TechnicalExpertise from "../Pages/TechnicalExpertise";
+
 
 export default function About() {
 
@@ -18,7 +18,6 @@ export default function About() {
           {/* Monthly Sales Chart */}
           <div className="w-full">
              <MonthlySalesChart /> 
-            {/* <TechnicalExpertise/> */}
           </div>
 
           {/* Recent Orders */}
