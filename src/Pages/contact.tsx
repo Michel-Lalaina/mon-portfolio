@@ -11,6 +11,8 @@ import LinkedIn from "@mui/icons-material/LinkedIn";
 import WhatsApp from "@mui/icons-material/WhatsApp";
 import { toast, ToastContainer } from 'react-toastify';
 import ContactMail from "@mui/icons-material/ContactMail";
+import emailjs from 'emailjs-com';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -31,23 +33,34 @@ const Contact = () => {
       return;
     }
 
-    const newMessage = {
-      name: formData.name,
-      email: formData.email,
-      message: formData.message,
-    };
-
-    const existingMessages = JSON.parse(localStorage.getItem("messages") || "[]");
-    localStorage.setItem("messages", JSON.stringify([...existingMessages, newMessage]));
-
-    toast.success("Votre message a été envoyé à Michel Lalaina.");
-    setFormData({ name: "", email: "", message: "" });
+    // Envoi via EmailJS
+    emailjs.send(
+      'service_j61db1h',      // Remplace par  Service ID
+      'template_tc2xicv',     // Remplace par Template ID
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      },
+      'Z_FGIeluSy3icSw0A'       // Remplace par Public Key
+    )
+    .then(
+      (result) => {
+        toast.success("Votre message a été envoyé !");
+        setFormData({ name: "", email: "", message: "" });
+      },
+      (error) => {
+        toast.error("Erreur lors de l'envoi du message.");
+      }
+    );
   };
 
   return (
     <div className="relative max-w-5xl mx-auto p-6 md:p-12 bg-white rounded-2xl shadow-lg">
       <ToastContainer position="top-right" autoClose={5000} />
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Contact <ContactMail className="text-purple-900" /></h2>
+      <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
+        Contact <ContactMail className="text-purple-900" />
+      </h2>
 
       <div className="grid md:grid-cols-2 gap-8">
         {/* Section Infos Contact */}
@@ -59,13 +72,13 @@ const Contact = () => {
             </p>
             <ul className="space-y-4 ">
               <li className="flex items-center gap-3 text-red-400">
-                <Email /> <a href="https://mail.google.com/michelramanantenasoa@mgmail.com" target="_blank">michelramanantenasoa@gmail.com</a>
+                <Email /> <a href="mailto:michelramanantenasoa@gmail.com">michelramanantenasoa@gmail.com</a>
               </li>
               <li className="flex items-center gap-3 text-blue-500">
                 <LinkedIn /> <a href="https://linkedin.com/Michel-Ramanantenasoa" target="_blank">Michel Ramanantenasoa</a>
               </li>
               <li className="flex items-center gap-3 text-green-400">
-                <WhatsApp /> <a href="tel:+261340309755">: +261 34 03 097 55</a>
+                <WhatsApp /> <a href="tel:+261340309755">+261 34 03 097 55</a>
               </li>
               <li className="flex items-center gap-3 text-gray-800">
                 <Phone /> <a href="tel:+261340309755">+261 34 03 097 55</a>

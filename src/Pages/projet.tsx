@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import car from "../assets/image/car.png";
 import caisse from "../assets/image/Home.png"
+import presence from "../assets/image/presence.png"
 import assistImg from "../assets/image/qcm.png";
 import exempleImg from "../assets/image/L3.png";
 import maisonImg from "../assets/image/maison.jpg";
@@ -33,7 +34,7 @@ const projects = [
     tags: ["React", "Node", "Tailwind CSS", "Sequelize"],
     image: exempleImg,
     link: "#",
-    date: "Novembre-Decembre 2025 ",
+    date: "Novembre2024 -janvier 2025 ",
   },
   {
     name: "Qcm_CAP",
@@ -69,6 +70,14 @@ const projects = [
     link: "#",
     date: "Juin 2023",
   },
+    {
+    name: "Gestion de présence",
+    description: "Platforme web de gestion de présence pour chaque cours de chaque prof à l'université.",
+    tags: ["React ", "Python", "PostgreSQL"],
+    image: presence,
+    link: "#",
+    date: "Décembre 2025 - en cours",
+  },
 ];
 
 const Projects = () => {
@@ -100,7 +109,7 @@ const Projects = () => {
   return (
     <div className="shadow-slate-100 relative bg-gradient-to-br from-gray-950 via-slate-50 to-gray-200 p-10 rounded-2xl overflow-hidden ">
       <h1 className="text-4xl font-extrabold mb-4"> Mes Projets <WorkHistory className="text-purple-900" /></h1>
-      <p className="text-gray-600 mb-6">
+      <p className="text-white mb-6">
         Des échantillons de projets personnels, projets de clients et aussi des projets sur lesquels j'ai contribué.
       </p>
 
@@ -134,7 +143,7 @@ const Projects = () => {
 
       <div className="text-center mt-10">
         <Button variant="contained" color="inherit" className="bg-gray-800 text-gray-50 px-6 py-2 rounded">
-          Voir plus
+          Voir détails en mp
         </Button>
       </div>
       <div className="absolute rounded-lg top-0 left-0 px-2 py-2 text-white font-bold mt-4 hover:underline">

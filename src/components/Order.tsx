@@ -20,7 +20,7 @@ const formations: Formation[] = [
     id: 2,
     formation: "Informatique (GB+IA)",
     annee: "2024/2025",
-    diplome: "Master 1 (en cours)",
+    diplome: "Master 1",
     lieu: "ENI Fianarantsoa",
   },
 ];

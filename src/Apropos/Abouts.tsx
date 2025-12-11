@@ -3,7 +3,7 @@ import Info from "@mui/icons-material/Info";
 import FormationInfoCard from "../components/Order";
 import SoftSkillsCard from "../components/softSkill";
 import MonthlyTarget from "../components/monthlyTarget";
-// import MonthlySalesChart from "../components/monthScale";
+ import MonthlySalesChart from "../components/monthScale";
 import TechnicalExpertise from "../Pages/TechnicalExpertise";
 
 export default function About() {
@@ -17,8 +17,8 @@ export default function About() {
         <div className="w-full md:w-5/6 flex flex-col gap-4 md:gap-6">
           {/* Monthly Sales Chart */}
           <div className="w-full">
-            {/* <MonthlySalesChart /> */}
-            <TechnicalExpertise/>
+             <MonthlySalesChart /> 
+            {/* <TechnicalExpertise/> */}
           </div>
 
           {/* Recent Orders */}

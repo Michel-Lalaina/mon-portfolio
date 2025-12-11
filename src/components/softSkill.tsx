@@ -8,7 +8,7 @@ const softSkills = [
   { name: "Créativité", value: 85 },
   { name: "Collaboration", value: 90 },
   { name: "Adaptabilité", value: 80 },
-  { name: "Résolution de problèmes", value: 95 },
+  { name: "Résolution ", value: 95 },
 ];
 
 export default function SoftSkillsCard() {
