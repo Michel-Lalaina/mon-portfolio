@@ -77,30 +77,33 @@ const Header = () => {
       </div>
 
       {/* Menu Mobile */}
-      <div className={`
-        md:hidden fixed top-0 left-0 h-screen w-64
-        bg-[#0c0c26]/80 backdrop-blur-xl
-        border-r border-white/10 shadow-xl
-        transition-transform duration-500 
-        ${isOpen ? "translate-x-0" : "-translate-x-full"}
-      `}>
-        <ul className="flex flex-col mt-20 space-y-8 pl-8">
-          {menuItems.map((item, i) => (
-            <li key={i} className="flex items-center space-x-4 text-gray-200">
-              <span className="text-red-400">{item.icon}</span>
-              <ScrollLink
-                to={item.name}
-                smooth={true}
-                duration={500}
-                className="hover:text-red-400 cursor-pointer text-sm tracking-wider"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name.charAt(0).toUpperCase() + item.name.slice(1)}
-              </ScrollLink>
-            </li>
-          ))}
-        </ul>
-      </div>
+{/* Menu Mobile */}
+<div className={`
+  md:hidden fixed top-0 left-0 h-screen w-64
+  bg-[#0c0c26]/80 backdrop-blur-xl
+  border-r border-white/10 shadow-xl
+  transition-transform duration-500 
+  z-[999]                       // <-- ICI : met le menu au-dessus du header
+  ${isOpen ? "translate-x-0" : "-translate-x-full"}
+`}>
+  <ul className="flex flex-col mt-20 space-y-8 pl-8">
+    {menuItems.map((item, i) => (
+      <li key={i} className="flex items-center space-x-4 text-gray-200">
+        <span className="text-red-400">{item.icon}</span>
+        <ScrollLink
+          to={item.name}
+          smooth={true}
+          duration={500}
+          className="hover:text-red-400 cursor-pointer text-sm tracking-wider"
+          onClick={() => setIsOpen(false)}
+        >
+          {item.name.charAt(0).toUpperCase() + item.name.slice(1)}
+        </ScrollLink>
+      </li>
+    ))}
+  </ul>
+</div>
+
     </header>
   );
 };
