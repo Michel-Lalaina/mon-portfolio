@@ -5,8 +5,8 @@ import Animation from "../components/Particles";
 import WhatsApp from "@mui/icons-material/WhatsApp";
 import LinkedIn from "@mui/icons-material/LinkedIn";
 import EmailOutlined from "@mui/icons-material/EmailOutlined";
-import DarkModeRounded from "@mui/icons-material/DarkModeRounded";
-import LightModeRounded from "@mui/icons-material/LightModeRounded";
+import DarkMode from "@mui/icons-material/DarkMode";
+import LightMode from "@mui/icons-material/LightMode";
 
 const Home = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -16,21 +16,50 @@ const Home = () => {
       <Animation />
       <div
         className={`flex flex-col md:flex-row justify-between items-center md:p-12 min-h-screen transition-all duration-100 ${darkMode
-          ? "bg-gradient-to-br from-[#616172] to-[#01010e] text-white"
+          ? "bg-gradient-to-br from-[#20202b] to-[#00000a] text-white"
           : "bg-gray-100 text-black"
           }`}
       >
-        {/* Bouton Mode au centre */}
+
+        {/* Bouton Mode moderne */}
+        {/* Switch Mode Premium */}
         <div className="absolute md:top-20 md:right-14 flex justify-center">
-  <button
-    className="bg-gray-800 text-slate-200 p-4 rounded-full shadow-lg 
-               hover:bg-gray-600 transition-all duration-500 transform 
-               animate-pulse flex items-center justify-center scale-110"
-    onClick={() => setDarkMode(!darkMode)}
-  >
-    {darkMode ? <LightModeRounded fontSize="medium" /> : <DarkModeRounded fontSize="medium" />}
-  </button>
-</div>
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className={`
+      flex items-center gap-2 px-6 py-2 rounded-full
+      backdrop-blur-xl transition-all duration-500
+      hover:scale-105 active:scale-95 select-none
+      
+      ${darkMode
+                ? "bg-black/50 text-white"
+                : "bg-gray-200 text-gray-900 shadow-[0_0_12px_rgba(0,0,0,0.15)]"
+              }
+    `}
+            style={{ border: "none", outline: "none" }}
+          >
+            {/* Icône cercle premium */}
+            <span
+              className={`
+        flex items-center justify-center w-8 h-8 rounded-full transition-all duration-500
+        ${darkMode
+                  ? "bg-black/40 text-gray-50"
+                  : "bg-gray-800 text-white"
+                }
+      `}
+              style={{ border: "none", outline: "none" }}
+            >
+              {darkMode ? <LightMode fontSize="small" /> : <DarkMode fontSize="small" />}
+            </span>
+
+            <span className="font-medium text-sm tracking-wide">
+              Mode
+            </span>
+          </button>
+        </div>
+
+
+
 
         {/* <div className=" absolute md:top-10 md:ml-96 flex justify-center md:w-full">
           <button

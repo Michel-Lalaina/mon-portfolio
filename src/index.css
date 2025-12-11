@@ -10,7 +10,15 @@
   100% { background-position: 0% 50%; }
 }
 
+@keyframes glow {
+  0% { box-shadow: 0 0 8px rgba(255,255,255,0.2); }
+  50% { box-shadow: 0 0 20px rgba(255,255,255,0.5); }
+  100% { box-shadow: 0 0 8px rgba(255,255,255,0.2); }
+}
 
+.animate-glow {
+  animation: glow 2.5s infinite ease-in-out;
+}
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradientMove 6s ease infinite;

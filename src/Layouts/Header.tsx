@@ -25,20 +25,24 @@ const Header = () => {
     //   shadow-[0_0_25px_rgba(255,0,0,0.15)]
     // ">
     <header
-  className="
+      className="
     fixed top-0 w-full z-50
-    bg-gradient-to-r from-[#1f1f3a]/80 via-[#2c2c50]/70 to-[#1f1f3a]/80 
-    backdrop-blur-xl
-    border-b border-white/30
-    shadow-[0_0_25px_rgba(255,0,0,0.15)]
+    bg-gradient-to-br from-[#252529] to-[#111125]
+    
   "
->
+    >
 
       <div className="container mx-auto h-16 flex justify-between items-center px-6">
 
         {/* Logo moderne */}
-        <div className="w-20 md:w-24 opacity-90 hover:opacity-100 transition-all duration-300 text-red-400 font-bold text-xl md:text-2xl">
-          Portfolio
+        <div className="
+  opacity-90 hover:opacity-100 transition-all duration-300
+  text-xl md:text-3xl font-bold italic
+  bg-gradient-to-r from-red-400 to-pink-600 
+  text-transparent bg-clip-text
+  tracking-wide 
+">
+          Michel
         </div>
 
         {/* Menu Desktop centré */}
@@ -51,6 +55,7 @@ const Header = () => {
               duration={500}
               className="
                 relative cursor-pointer 
+                font-bold
                 transition-all hover:text-red-400
                 before:absolute before:bottom-[-4px] before:left-1/2 before:w-0 before:h-[2px] 
                 before:bg-red-400 before:transition-all before:duration-300 before:-translate-x-1/2
@@ -63,8 +68,8 @@ const Header = () => {
         </nav>
 
         {/* Bouton mobile */}
-        <button 
-          className="md:hidden text-white text-3xl transition-transform active:scale-90" 
+        <button
+          className="md:hidden text-white text-3xl transition-transform active:scale-90"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? "✖" : "☰"}
