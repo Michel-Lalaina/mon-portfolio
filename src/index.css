@@ -34,6 +34,13 @@
 
 }
 
+:root {
+  --pink-bar: #3b82f6;     /* Bleu clair */
+  --green-bar: #22c55e;    /* Vert */
+  --purple-bar: #a855f7;   /* Violet */
+}
+
+
 a {
   font-weight: 500;
   /* color: #646cff; */

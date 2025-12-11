@@ -3,12 +3,13 @@ import Info from "@mui/icons-material/Info";
 import FormationInfoCard from "../components/Order";
 import SoftSkillsCard from "../components/softSkill";
 import MonthlyTarget from "../components/monthlyTarget";
-import MonthlySalesChart from "../components/monthScale";
+// import MonthlySalesChart from "../components/monthScale";
+import TechnicalExpertise from "../Pages/TechnicalExpertise";
 
 export default function About() {
 
   return (
-    <div className="relative max-w-7xl mx-auto bg-gray-50 w-full  p-4 rounded-2xl shadow-xl">
+    <div className="relative max-w-7xl mx-auto bg-gray-100 w-full  p-4 rounded-2xl shadow-xl">
       <h2 className="py-4 text-4xl font-extrabold text-gray-800 tracking-tight">À propos de moi <Info className="text-purple-900" /></h2>
 
       <div className="items-center md:ml-20 justify-between w-full flex flex-col gap-4 md:flex-row md:gap-6">
@@ -16,7 +17,8 @@ export default function About() {
         <div className="w-full md:w-5/6 flex flex-col gap-4 md:gap-6">
           {/* Monthly Sales Chart */}
           <div className="w-full">
-            <MonthlySalesChart />
+            {/* <MonthlySalesChart /> */}
+            <TechnicalExpertise/>
           </div>
 
           {/* Recent Orders */}
