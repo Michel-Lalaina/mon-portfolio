@@ -70,14 +70,22 @@ const Header = () => {
         {/* Bouton mobile FIXÉ & VISIBILE */}
         <button
           className="
-            md:hidden text-white text-xl 
-            transition-transform active:scale-90
-            relative z-[60]
-          "
+    md:hidden
+    text-white text-xl        /* toujours blanc */
+    bg-black/60               /* fond sombre constant */
+    px-3 py-2 rounded-md      /* petit fond rectangulaire pour éviter le blanc */
+    transition-transform active:scale-90
+    relative z-[60]
+  "
           onClick={() => setIsOpen(!isOpen)}
+          style={{
+            color: "#fff",            // force la couleur
+            backgroundColor: "rgba(0,0,0,0.6)", // force le fond sombre
+          }}
         >
           {isOpen ? "✖" : "☰"}
         </button>
+
       </div>
 
       {/* Menu Mobile */}

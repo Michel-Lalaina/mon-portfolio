@@ -16,7 +16,7 @@ const Home = () => {
       <Animation />
       <div
         className={`flex flex-col md:flex-row justify-between items-center md:p-12 min-h-screen transition-all duration-100 ${darkMode
-          ? "bg-gradient-to-br from-[#222229] to-[#00000a] text-white"
+          ? "bg-gradient-to-br from-[#222229] to-[#040427] text-white"
           : "bg-gray-100 text-black"
           }`}
       >
@@ -46,7 +46,7 @@ const Home = () => {
               className={`
         flex items-center justify-center 
         w-6 h-6              /* plus petit en mobile */
-        md:w-8 md:h-8        /* taille normale sur ordinateur */
+        md:w-8 md:h-8        /* normale sur ordinateur */
         rounded-full transition-all duration-500
         ${darkMode
                   ? "bg-black/40 text-gray-50"
