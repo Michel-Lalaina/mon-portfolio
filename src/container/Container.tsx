@@ -6,19 +6,17 @@ import Header from "../Layouts/Header";
 import Contact from "../Pages/contact";
 import Projects from "../Pages/projet";
 import Competences from "../Pages/skills";
-import { useNavigate } from "react-router-dom";
 
 
 const Profile: React.FC = () => {
 
-  const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col min-h-screen w-screen ">
+    <div className="flex flex-col min-h-screen w-screen overflow-x-hidden">
       <div className="fixed mb-50">
         <Header />
       </div>
-      <div className="flex flex-col items-center h-full">
+      <div className="flex flex-col items-center h-full overflow-x-hidden w-full">
 
         {/* Accueil */}
         <div id="accueil" className="mb-40 top-4  w-full">
@@ -38,11 +36,6 @@ const Profile: React.FC = () => {
 
         <div id="contact" className="mb-40 w-full">
           <Contact />
-        </div>
-
-        <div  className="right-0 text-white" onClick={() => navigate("/Admin")}
-        >
-          +
         </div>
 
         <div id="footer" className=" w-full">

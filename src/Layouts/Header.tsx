@@ -21,22 +21,25 @@ const Header = () => {
     <header
       className="
         fixed top-0 w-full z-50 
-        bg-gradient-to-br from-[#252529] to-[#111125]
+        bg-gradient-to-br from-[#313135] to-[#151527]
+        overflow-x-hidden
       "
     >
-      <div className="container mx-auto h-16 flex justify-between items-center px-6">
+      {/* <div className="container mx-auto h-16 flex justify-between items-center px-6"> */}
+      <div className="max-w-full w-full h-16 flex justify-between items-center px-4">
+
 
         {/* Logo */}
         <div
           className="
-            opacity-90 hover:opacity-100 transition-all duration-300
-            text-xl md:text-3xl font-bold italic
-            bg-gradient-to-r from-red-400 to-pink-600 
-            text-transparent bg-clip-text
-            tracking-wide
-          "
+    opacity-90 hover:opacity-100 transition-all duration-300
+    text-base sm:text-lg md:text-2xl font-bold italic
+    bg-gradient-to-r from-red-400 to-pink-600 
+    text-transparent bg-clip-text
+    tracking-wide
+  "
         >
-          Michel
+          Michel RAM
         </div>
 
         {/* Menu Desktop */}
@@ -67,7 +70,7 @@ const Header = () => {
         {/* Bouton mobile FIXÉ & VISIBILE */}
         <button
           className="
-            md:hidden text-white text-3xl 
+            md:hidden text-white text-xl 
             transition-transform active:scale-90
             relative z-[60]
           "

@@ -35,14 +35,14 @@ const Contact = () => {
 
     // Envoi via EmailJS
     emailjs.send(
-      'service_j61db1h',      // Remplace par  Service ID
-      'template_tc2xicv',     // Remplace par Template ID
+      'service_j61db1h',      // Service ID
+      'template_tc2xicv',     // Template ID
       {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
       },
-      'Z_FGIeluSy3icSw0A'       // Remplace par Public Key
+      'Z_FGIeluSy3icSw0A'       // Public Key
     )
     .then(
       () => {
@@ -75,7 +75,7 @@ const Contact = () => {
                 <Email /> <a href="mailto:michelramanantenasoa@gmail.com">michelramanantenasoa@gmail.com</a>
               </li>
               <li className="flex items-center gap-3 text-blue-500">
-                <LinkedIn /> <a href="https://linkedin.com/Michel-Ramanantenasoa" target="_blank">Michel Ramanantenasoa</a>
+                <LinkedIn /> <a href="https://www.linkedin.com/in/michel-ramanantenasoa-3270002a1/" target="_blank">Michel Ramanantenasoa</a>
               </li>
               <li className="flex items-center gap-3 text-green-400">
                 <WhatsApp /> <a href="tel:+261340309755">+261 34 03 097 55</a>

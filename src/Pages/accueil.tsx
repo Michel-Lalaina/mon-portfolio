@@ -21,13 +21,15 @@ const Home = () => {
           }`}
       >
 
-        {/* Bouton Mode moderne */}
-        {/* Switch Mode Premium */}
+        {/* Switch Mode  */}
         <div className="absolute md:top-20 md:right-14 flex justify-center">
           <button
             onClick={() => setDarkMode(!darkMode)}
             className={`
-      flex items-center gap-2 px-6 py-2 rounded-full
+      flex items-center gap-2 
+      px-3 py-1.5            /* plus petit en mobile */
+      md:px-6 md:py-2        /* normal en ordinateur */
+      rounded-full
       backdrop-blur-xl transition-all duration-500
       hover:scale-105 active:scale-95 select-none
       
@@ -38,10 +40,14 @@ const Home = () => {
     `}
             style={{ border: "none", outline: "none" }}
           >
-            {/* Icône cercle premium */}
+
+            {/* Icône cercle */}
             <span
               className={`
-        flex items-center justify-center w-8 h-8 rounded-full transition-all duration-500
+        flex items-center justify-center 
+        w-6 h-6              /* plus petit en mobile */
+        md:w-8 md:h-8        /* taille normale sur ordinateur */
+        rounded-full transition-all duration-500
         ${darkMode
                   ? "bg-black/40 text-gray-50"
                   : "bg-gray-800 text-white"
@@ -52,25 +58,13 @@ const Home = () => {
               {darkMode ? <LightMode fontSize="small" /> : <DarkMode fontSize="small" />}
             </span>
 
-            <span className="font-medium text-sm tracking-wide">
+            {/* Texte Mode */}
+            <span className="font-medium text-xs md:text-sm tracking-wide">
               Mode
             </span>
           </button>
         </div>
 
-
-
-
-        {/* <div className=" absolute md:top-10 md:ml-96 flex justify-center md:w-full">
-          <button
-            className="bg-gray-800 text-slate-200 p-3 rounded-full shadow-lg 
-               hover:bg-gray-600 transition-all duration-500 transform 
-               animate-pulse flex items-center justify-center"
-            onClick={() => setDarkMode(!darkMode)}
-          >
-            {darkMode ? <LightModeRounded fontSize="small" /> : <DarkModeRounded fontSize="small" />}
-          </button>
-        </div> */}
 
 
         {/* Partie gauche */}
@@ -87,14 +81,14 @@ const Home = () => {
           </div>
           <div className="flex justify-center md:justify-start space-x-4 text-xl">
             <a href="https://github.com/Michel-Lalaina" target="_blank" className="hover:text-white transition-transform transform hover:scale-125"><GitHub /></a>
-            <a href="https://linkedin.com/Michel Ramanantenasoa" target="_blank" className="hover:text-blue-500 transition-transform transform hover:scale-125"><LinkedIn /></a>
+            <a href="https://www.linkedin.com/in/michel-ramanantenasoa-3270002a1/" target="_blank" className="hover:text-blue-500 transition-transform transform hover:scale-125"><LinkedIn /></a>
             <a href="tel:+261340309755" className="hover:text-green-500 transition-transform transform hover:scale-125"><WhatsApp /></a>
-            <a href="https://mail.google.com/michelramanantenasoa@mgmail.com" target="_blank" className="hover:text-red-400 transition-transform transform hover:scale-125"><EmailOutlined /></a>
+            <a href="mailto:michelramanantenasoa@gmail.com" target="_blank" className="hover:text-red-400 transition-transform transform hover:scale-125"><EmailOutlined /></a>
           </div>
         </div>
 
         {/* Partie centrale */}
-        <div className="text-center flex flex-col items-center mt-6 md:mt-10">
+        <div className="text-center ml-10 flex flex-col items-center mt-6 md:mt-10">
           <img src={photoP} alt="Michel Lalaina" className="p-1 w-40  h-40 md:w-3/4 md:h-64 rounded-full shadow-lg object-cover mb-4" />
           <h1 className="text-4xl md:text-6xl font-bold">Michel <span className=" text-slate-500">Ram</span></h1>
           <span className="text-slate-500 font-semibold ">Lalaina</span>
@@ -105,9 +99,11 @@ const Home = () => {
 
         {/* Partie droite */}
         <div className="text-center flex  text-sm md:text-right space-x-4 md:space-y-4 md:flex-col font-bold mt-6 md:mt-0">
-          <div><span className="text-lg md:text-xl">100%</span><br /> Satisfaction client</div>
           <div><span className="text-lg md:text-xl">20+</span><br /> Projets</div>
+          <div><span className="text-lg md:text-xl">100%</span><br /> Satisfaction client</div>
+
           <div><span className="text-lg md:text-xl">3+</span><br /> Années d'experience.</div>
+          <div><span className="text-lg md:text-xl"></span> Actuellement développeur backend chez OBS Antananarivo.</div>
         </div>
       </div>
     </>

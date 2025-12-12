@@ -20,9 +20,9 @@ const Footer: React.FC = () => {
         <div className="flex space-x-6 mt-4 md:mt-0 ">
           {[
             { href: "https://github.com/Michel-Lalaina", icon: <GitHub fontSize="large" />, color: "hover:text-gray-300" },
-            { href: "https://linkedin.com/Michel-Ramanantenasoa", icon: <LinkedIn fontSize="large" />, color: "hover:text-blue-500" },
+            { href: "https://www.linkedin.com/in/michel-ramanantenasoa-3270002a1/", icon: <LinkedIn fontSize="large" />, color: "hover:text-blue-500" },
             { href: "https://twitter.com/", icon: <Twitter fontSize="large" />, color: "hover:text-blue-400" },
-            { href: "https://mail.google.com/michelramanantenasoa@mgmail.com", icon: <Email fontSize="large" />, color: "hover:text-red-400" },
+            { href: "mailto:michelramanantenasoa@gmail.com", icon: <Email fontSize="large" />, color: "hover:text-red-400" },
           ].map((link, index) => (
             <a
               key={index}
