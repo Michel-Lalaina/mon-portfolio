@@ -18,35 +18,32 @@ const Header = () => {
   ];
 
   return (
-    // <header className="
-    //   fixed top-0 w-full z-50
-    //   bg-gradient-to-r from-[#1f1f3a]/80 via-[#2c2c50]/70 to-[#1f1f3a]/80 backdrop-blur-xl
-    //   border-b border-gray-700/20 
-    //   shadow-[0_0_25px_rgba(255,0,0,0.15)]
-    // ">
     <header
       className="
-    fixed top-0 w-full z-50
-    bg-gradient-to-br from-[#252529] to-[#111125]
-    
-  "
+        fixed top-0 w-full z-50 
+        bg-gradient-to-br from-[#252529] to-[#111125]
+      "
     >
-
       <div className="container mx-auto h-16 flex justify-between items-center px-6">
 
-        {/* Logo moderne */}
-        <div className="
-  opacity-90 hover:opacity-100 transition-all duration-300
-  text-xl md:text-3xl font-bold italic
-  bg-gradient-to-r from-red-400 to-pink-600 
-  text-transparent bg-clip-text
-  tracking-wide 
-">
+        {/* Logo */}
+        <div
+          className="
+            opacity-90 hover:opacity-100 transition-all duration-300
+            text-xl md:text-3xl font-bold italic
+            bg-gradient-to-r from-red-400 to-pink-600 
+            text-transparent bg-clip-text
+            tracking-wide
+          "
+        >
           Michel
         </div>
 
-        {/* Menu Desktop centré */}
-        <nav className="hidden md:flex space-x-16 text-gray-200 text-sm tracking-wide font-semibold justify-center ">
+        {/* Menu Desktop */}
+        <nav className="
+          hidden md:flex space-x-16 
+          text-gray-200 text-sm tracking-wide font-semibold justify-center
+        ">
           {menuItems.map((item, i) => (
             <ScrollLink
               key={i}
@@ -67,9 +64,13 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Bouton mobile */}
+        {/* Bouton mobile FIXÉ & VISIBILE */}
         <button
-          className="md:hidden text-white text-3xl transition-transform active:scale-90"
+          className="
+            md:hidden text-white text-3xl 
+            transition-transform active:scale-90
+            relative z-[60]
+          "
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? "✖" : "☰"}
@@ -77,13 +78,16 @@ const Header = () => {
       </div>
 
       {/* Menu Mobile */}
-      <div className={`
-        md:hidden fixed top-0 left-0 h-screen w-64
-        bg-[#0c0c26]/80 backdrop-blur-xl
-        border-r border-white/10 shadow-xl
-        transition-transform duration-500 
-        ${isOpen ? "translate-x-0" : "-translate-x-full"}
-      `}>
+      <div
+        className={`
+          md:hidden fixed top-0 left-0 h-screen w-64
+          bg-[#0c0c26]/90 backdrop-blur-xl
+          border-r border-white/10 shadow-xl
+          transition-transform duration-500 
+          ${isOpen ? "translate-x-0" : "-translate-x-full"}
+          z-50
+        `}
+      >
         <ul className="flex flex-col mt-20 space-y-8 pl-8">
           {menuItems.map((item, i) => (
             <li key={i} className="flex items-center space-x-4 text-gray-200">

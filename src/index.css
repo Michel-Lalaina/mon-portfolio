@@ -23,6 +23,10 @@
   background-size: 200% 200%;
   animation: gradientMove 6s ease infinite;
 }
+html, body {
+  overflow-x: hidden;
+}
+
 
 :root {
 
