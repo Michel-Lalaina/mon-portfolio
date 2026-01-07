@@ -103,7 +103,7 @@ const Home = () => {
           <div><span className="text-lg md:text-xl">100%</span><br /> Satisfaction client</div>
 
           <div><span className="text-lg md:text-xl">3+</span><br /> Années d'experience.</div>
-          <div><span className="text-lg md:text-xl"></span> Actuellement développeur backend chez OBS Antananarivo.</div>
+          <div><span className="text-lg md:text-xl"></span> Actuellement développeur chez OBS Antananarivo.</div>
         </div>
       </div>
     </>

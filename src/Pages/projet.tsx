@@ -147,7 +147,7 @@ const Projects = () => {
         </Button>
       </div>
       <div className="absolute rounded-lg top-0 left-0 px-2 py-2 text-white font-bold mt-4 hover:underline">
-        Mis à jour 2025
+        Mis à jour 2026
       </div>
     </div>
   );
